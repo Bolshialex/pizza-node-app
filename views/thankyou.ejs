@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Thank you for your order, <%= orders.fname %>!</h1>
+    <h3>Order Summary</h3>
+
+    <ul>
+      <li>First name: <%= orders.fname %></li>
+      <li>Last name: <%= orders.lname %></li>
+      <li>Email: <%= orders.email %></li>
+      <li>Method of delivery: <%= orders.method %></li>
+      <li>
+        <%= Array.isArray(orders.toppings) ? orders.toppings.join(', ') :
+        orders.toppings %>
+      </li>
+      <li>Pizza size:<%= orders.size%></li>
+    </ul>
+  </body>
+</html>
